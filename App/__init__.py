@@ -1,6 +1,6 @@
 from flask import Flask
 from .extensions import db, migrate
-# from .blueprints.user.routes import user_bp # type: ignore
+from .blueprints import register_blueprints  # Import the function
 
 def create_app(config_class='config.DevelopmentConfig'):
     app = Flask(__name__)
@@ -8,9 +8,9 @@ def create_app(config_class='config.DevelopmentConfig'):
 
     # Initialize extensions
     db.init_app(app)
-    migrate.init_app(app, db)  # Initialize Flask-Migrate
+    migrate.init_app(app, db)
 
-    # Register blueprints
-    # app.register_blueprint(user_bp, url_prefix='/user')
+    # Register all blueprints
+    register_blueprints(app)
 
     return app
