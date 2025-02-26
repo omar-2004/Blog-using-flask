@@ -1,4 +1,3 @@
-
 # 📚 Flask Full-Stack Application Template
 
 Welcome to the **Flask Full-Stack Application Template**, an open-source project designed for **learning, experimentation**, and **rapid prototyping**. This project provides a **modular and scalable structure** for building Flask applications that incorporate both front-end and back-end components. It can serve as a **starting point** for various types of applications or simply as a **reference for studying Flask best practices**.
@@ -51,8 +50,8 @@ Welcome to the **Flask Full-Stack Application Template**, an open-source project
 ### 1️⃣ **Clone the Repository**
 
 ```bash
-git clone <repository_url>
-cd my_flask_app
+git clone https://github.com/omar-2004/Blog-using-flask
+cd Blog-using-flask
 ```
 
 ### 2️⃣ **Create a Virtual Environment**
@@ -60,6 +59,7 @@ cd my_flask_app
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\\Scripts\\activate
+
 ```
 
 ### 3️⃣ **Install Dependencies**
