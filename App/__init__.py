@@ -10,7 +10,7 @@ def create_app(config_class='config.DevelopmentConfig'):
     load_dotenv()
     app = Flask(__name__)
     app.config.from_object(config_class)
-
+    
     # Initialize extensions
     csrf.init_app(app)
     limiter.init_app(app)
