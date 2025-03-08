@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template
-auth = Blueprint('user', __name__)
+auth = Blueprint('auth', __name__)
 # login_manager.login_view = 'login'  # Redirect to login page if not logged in
 
 # from . import routes
