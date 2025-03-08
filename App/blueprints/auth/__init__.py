@@ -9,7 +9,7 @@ auth = Blueprint('user', __name__)
 def home():
     return "<h1>Login</h1"
 
-@login_manager.user_loader
+# @login_manager.user_loader
 @auth.route("/testing")
 def test():
     return render_template('base.html')
