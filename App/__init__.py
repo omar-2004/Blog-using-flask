@@ -1,5 +1,5 @@
 from flask import Flask
-from .extensions import db, migrate, csrf, limiter, Talisman
+from .extensions import db, migrate, csrf, limiter,bcrypt,login_manager
 from .blueprints import register_blueprints  # Import the function
 from flask_debugtoolbar import DebugToolbarExtension
 from dotenv import load_dotenv
@@ -14,12 +14,16 @@ def create_app(config_class='config.DevelopmentConfig'):
     # Initialize extensions
     csrf.init_app(app)
     limiter.init_app(app)
-    Talisman(app, content_security_policy=None)  # Basic HTTP security headers
+    # Talisman(app, content_security_policy=True)  # Basic HTTP security headers
     db.init_app(app)
     migrate.init_app(app, db)
+    bcrypt.init_app(app)
+    login_manager.init_app(app)
     configure_logging(app)
     # Enable the toolbar
     toolbar = DebugToolbarExtension(app)
+    login_manager.login_view = 'auth/Login'  # Redirect to login page if not logged in
+
 
     # Register all blueprints
     register_blueprints(app)
