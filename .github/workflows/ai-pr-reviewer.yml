@@ -6,8 +6,7 @@ permissions:
 
 on:
   pull_request:
-  pull_request_review_comment:
-    types: [created]
+  workflow_dispatch:  # Allows manual triggering
 
 jobs:
   review:
@@ -18,6 +17,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         with:
-          debug: true # Debugging enabled
+          debug: true
           review_simple_changes: false
           review_comment_lgtm: false
