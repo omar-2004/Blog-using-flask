@@ -26,4 +26,4 @@ jobs:
       - name: Run Flask tests
         run: |
           source venv/bin/activate
-          flask run  # Run Flask tests (Make sure you have tests)
+          flask run 
