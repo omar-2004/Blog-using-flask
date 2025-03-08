@@ -1,4 +1,4 @@
-name: Deploy Flask to Heroku
+name: Flask Deployment
 
 on:
   push:
@@ -27,4 +27,4 @@ jobs:
           heroku login
           git push heroku main
         env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }} # password
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }} #
