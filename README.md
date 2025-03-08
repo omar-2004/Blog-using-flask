@@ -1,3 +1,6 @@
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/omar-2004/Blog-using-flask?labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit%20Reviews)
+[![Code Review](https://github.com/omar-2004/Blog-using-flask/actions/workflows/ai-pr-reviewer.yml/badge.svg)](https://github.com/omar-2004/Blog-using-flask/actions/workflows/ai-pr-reviewer.yml)
+
 # 📚 Flask Full-Stack Application Template
 
 Welcome to the **Flask Full-Stack Application Template**, an open-source project designed for **learning, experimentation**, and **rapid prototyping**. This project provides a **modular and scalable structure** for building Flask applications that incorporate both front-end and back-end components. It can serve as a **starting point** for various types of applications or simply as a **reference for studying Flask best practices**.
@@ -141,5 +144,3 @@ This project is **open source** and distributed under the **MIT License**. Howev
 ---
 
 ### 🎉 **Happy coding and happy learning!** 🚀
-
-![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/omar-2004/Blog-using-flask?labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit%20Reviews)
