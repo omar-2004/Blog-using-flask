@@ -6,7 +6,7 @@ from . import routes
 @login_manager.user_loader
 @user_bp.route('')
 def home():
-    return render_template('auth/login.html')
+    return render_template('base/base.html')
 
 @login_manager.user_loader
 @user_bp.route("/testing")
