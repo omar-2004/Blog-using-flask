@@ -23,9 +23,22 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Deploy to Heroku
+      # 🔥 Install Heroku CLI (Fixes "heroku: command not found" error)
+      - name: Install Heroku CLI
         run: |
-          heroku login
-          git push heroku main
+          curl https://cli-assets.heroku.com/install.sh | sh
+
+      # 🔐 Authenticate with Heroku using API Key
+      - name: Login to Heroku
         env:
-          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }} #
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: |
+          echo $HEROKU_API_KEY | heroku auth:token
+
+      # 🚀 Deploy Flask App to Heroku
+      - name: Deploy to Heroku
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        run: |
+          heroku git:remote -a YOUR_HEROKU_APP_NAME
+          git push heroku main
