@@ -5,8 +5,9 @@ permissions:
   pull-requests: write
 
 on:
-  pull_request:
-  workflow_dispatch:  # Allows manual triggering
+  pull_request: # Ensure this exists
+  pull_request_review_comment:
+    types: [created]
 
 jobs:
   review:
