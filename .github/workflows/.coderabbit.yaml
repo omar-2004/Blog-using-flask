@@ -1,4 +1,4 @@
-name: Code Review
+name: CodeRabbit
 
 permissions:
   contents: read
