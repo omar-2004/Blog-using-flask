@@ -22,6 +22,7 @@ def create_app(config_class='config.DevelopmentConfig'):
     configure_logging(app)
     # Enable the toolbar
     toolbar = DebugToolbarExtension(app)
+
     login_manager.login_view = 'auth/Login'  # Redirect to login page if not logged in
 
 

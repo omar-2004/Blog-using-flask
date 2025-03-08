@@ -3,4 +3,4 @@
 venv
 __pycache__
 app/__pycache__
-.github/workflow/*.yml
+Bootstrap Studio/*

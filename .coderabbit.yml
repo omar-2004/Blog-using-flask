@@ -1,0 +1,9 @@
+reviews:
+  enabled: true
+  auto_review: true
+  auto_summarize: true
+  auto_title: true
+  auto_title_instructions: "Generate a title based on the changes in the PR"
+  max_comments: 10
+  simple_changes: false
+  comment_lgtm: false
