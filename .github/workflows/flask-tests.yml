@@ -1,11 +1,12 @@
-name: Run Flask Tests
+name: Deploy Flask to Heroku
 
 on:
   push:
-  pull_request:
+    branches:
+      - main
 
 jobs:
-  test:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,11 +20,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m venv venv
-          source venv/bin/activate
           pip install -r requirements.txt
 
-      - name: Run Flask tests
+      - name: Deploy to Heroku
         run: |
-          source venv/bin/activate
-          flask run 
+          heroku login
+          git push heroku main
+        env:
+          HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
