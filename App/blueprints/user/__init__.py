@@ -8,9 +8,9 @@ from . import routes
 def home():
     return render_template('auth/login.html')
 
-@login_manager.user_loader
-@user_bp.route("/testing")
-def test():
-    return render_template('base.html')
+# @login_manager.user_loader
+# @user_bp.route("/testing")
+# def test():
+#     return render_template('base.html')
 
 

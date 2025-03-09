@@ -24,6 +24,11 @@ def create_app(config_class='config.DevelopmentConfig'):
     toolbar = DebugToolbarExtension(app)
     login_manager.login_view = 'auth/Login'  # Redirect to login page if not logged in
 
+    @app.context_processor
+    def inject_globals():
+        return {"WebSiteTitle": "Code&Build",
+                "CompanyName":"LetsCode"
+                }
 
     # Register all blueprints
     register_blueprints(app)
