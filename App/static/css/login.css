@@ -1,15 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-main {
-  background-color: antiquewhite;
-  width: 100dvw;
-  min-height: 60dvh;
-}
-
-footer {
-  height: 25dvh;
+footer,
+nav {
+  background-color: rgb(230, 230, 230);
 }/*# sourceMappingURL=login.css.map */

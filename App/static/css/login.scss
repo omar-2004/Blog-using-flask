@@ -1,27 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+footer,
+nav {
+  background-color: rgb(230, 230, 230);
 }
-
-main {
-  background-color: antiquewhite;
-  width: 100dvw;
-  min-height: 60dvh;
-}
-footer {
-  height: 25dvh;
-}
-
-// body {
-//   display: grid;
-//   place-content: center;
-//   width: 100dvw;
-//   height: 100dvh;
-// }
-// h1 {
-//   font-size: 3rem;
-//   font-family: serif;
-//   text-transform: uppercase;
-//   letter-spacing: 0.5em;
-// }

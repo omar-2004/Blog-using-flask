@@ -1,16 +1,17 @@
-from flask import Blueprint, render_template
-from App import login_manager
+from flask import Blueprint, render_template, redirect, url_for
+from flask_login import  login_required
+
 user_bp = Blueprint('user', __name__)
 
-from . import routes
-@login_manager.user_loader
+
+
 @user_bp.route('')
+@login_required 
 def home():
     return render_template('base/base.html')
 
-@login_manager.user_loader
 @user_bp.route("/testing")
+@login_required 
 def test():
-    return render_template('base.html')
-
+    return "testing"
 

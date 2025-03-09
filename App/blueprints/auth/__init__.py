@@ -1,15 +1,25 @@
 from flask import Blueprint, render_template
-auth = Blueprint('user', __name__)
-# login_manager.login_view = 'login'  # Redirect to login page if not logged in
+from flask_login import  UserMixin
+from App import login_manager
 
-# from . import routes
+auth = Blueprint('auth', __name__)
 
+users = {"admin": {"password": "password123"}}
+
+class User(UserMixin):
+    def __init__(self, user_id):
+        self.id = user_id
+
+@login_manager.user_loader
+def load_user(user_id):
+    if user_id in users:
+        return User(user_id)
+    return None  # If user not found
 
 @auth.route('/Login', methods=["POST", "GET"])
 def home():
-    return "<h1>Login</h1"
+    return render_template('auth/login.html')
 
-# @login_manager.user_loader
 @auth.route("/testing")
 def test():
     return render_template('base.html')

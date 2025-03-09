@@ -23,14 +23,18 @@ def create_app(config_class='config.DevelopmentConfig'):
     # Enable the toolbar
     toolbar = DebugToolbarExtension(app)
 
-    login_manager.login_view = 'auth/Login'  # Redirect to login page if not logged in
+    login_manager.login_view = 'auth.home'
 
 
+    @app.context_processor
+    def inject_globals() -> dict[str, str]:
+        return {"WebSiteTitle": "AlphaCode",
+                "CompanyName":"AlphaCode"
+                }
     # Register all blueprints
     register_blueprints(app)
 
     return app
-
 
 
 
