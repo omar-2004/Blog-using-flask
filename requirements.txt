@@ -4,7 +4,7 @@ blinker==1.9.0
 click==8.1.8
 colorama==0.4.6
 Deprecated==1.2.18
-Flask==3.1.0
+Flask==3.1.1
 Flask-Bcrypt==1.0.1
 Flask-DebugToolbar==0.16.0
 Flask-DotEnv==0.1.2
